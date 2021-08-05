@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UserRegistrationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-08-05T17:52:45" hostname="LAPTOP-QHGU1R2U" time="0.006">
+  <properties/>
+  <testcase name="givenInValidLastName_ShouldReturnFalse_Test" classname="UserRegistrationTest" time="0.003"/>
+  <testcase name="givenInValidFirstName_ShouldReturnFalse_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenInValidPassword_ShouldReturnFalse_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenValidPassword_ShouldReturnTrue_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenValidLastName_ShouldReturnTrue_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenValidEmail_ShouldReturnTrue_Test" classname="UserRegistrationTest" time="0.001"/>
+  <testcase name="givenValidFirstName_ShouldReturnTrue_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenInValidEmail_ShouldReturnFalse_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenInValidMobile_ShouldReturnFalse_Test" classname="UserRegistrationTest" time="0.0"/>
+  <testcase name="givenValidMobile_ShouldReturnTrue_Test" classname="UserRegistrationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
