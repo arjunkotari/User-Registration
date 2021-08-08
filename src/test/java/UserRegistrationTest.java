@@ -1,74 +1,72 @@
 import com.userRegistration.UserRegistration;
+import com.userRegistration.UserRegistrationException;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class UserRegistrationTest {
 
-
     @Test
-    public void givenValidFirstName_ShouldReturnTrue_Test() {
+    public void givenFirstName_CustomExceptions(){
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateFirstName("Arjun");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenInValidFirstName_ShouldReturnFalse_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateFirstName("Arjun@");
-        Assert.assertFalse(result);
-    }
-
-    @Test
-    public void givenValidLastName_ShouldReturnTrue_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateLastName("Sai");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenInValidLastName_ShouldReturnFalse_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateLastName("Sai@");
-        Assert.assertFalse(result);
+        boolean name;
+        try{
+            name = userRegistration.firstNameException("Arjun");
+            Assert.assertTrue(name);
+        }
+        catch (UserRegistrationException e){
+            System.out.println(e.getMessage());
+        }
     }
 
     @Test
-    public void givenValidEmail_ShouldReturnTrue_Test() {
+    public void givenLastName_CustomExceptions(){
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateEmail("abc.100@yahoo.com.in");
-        Assert.assertTrue(result);
+        boolean name;
+        try{
+            name = userRegistration.lastNameException("");
+            Assert.assertTrue(name);
+        }
+        catch (UserRegistrationException e){
+            System.out.println(e.getMessage());
+        }
     }
+
     @Test
-    public void givenInValidEmail_ShouldReturnFalse_Test() {
+    public void givenEmail_CustomExceptions(){
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateEmail("abc()*@gmail.com@");
-        Assert.assertFalse(result);
+        boolean mail;
+        try{
+            mail = userRegistration.emailException("arjun@gmail.com.co.in");
+            Assert.assertTrue(mail);
+        }
+        catch (UserRegistrationException e){
+            System.out.println(e.getMessage());
+        }
     }
 
     @Test
-    public void givenValidMobile_ShouldReturnTrue_Test() {
+    public void givenMobileNumber_CustomExceptions(){
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateMobile("91 8499880099");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenInValidMobile_ShouldReturnFalse_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validateMobile("8699009777");
-        Assert.assertFalse(result);
-    }
-
-
-    @Test
-    public void givenValidPassword_ShouldReturnTrue_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validatePassword("Asdeq1f%dg");
-        Assert.assertTrue(result);
-    }
-    @Test
-    public void givenInValidPassword_ShouldReturnFalse_Test() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.validatePassword("Asde$gf");
-        Assert.assertFalse(result);
+        boolean mobileNumber;
+        try{
+            mobileNumber = userRegistration.mobileNumberException("91 8499889900");
+            Assert.assertTrue(mobileNumber);
+        }
+        catch (UserRegistrationException e){
+            System.out.println(e.getMessage());
+        }
     }
 
+    @Test
+    public void givenPassword_CustomExceptions(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean name;
+        try{
+            name = userRegistration.passwordException("asde#1rR");
+            Assert.assertTrue(name);
+        }
+        catch (UserRegistrationException e){
+            System.out.println(e.getMessage());
+        }
+    }
 }

@@ -1,2 +1,4 @@
 com/userRegistration/UserRegistration.java
  com.userRegistration.UserRegistration
+com/userRegistration/UserRegistrationException.java
+ com.userRegistration.UserRegistrationException
